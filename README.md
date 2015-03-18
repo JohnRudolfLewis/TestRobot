@@ -1,4 +1,4 @@
 # TestRobot
 
 
-[![Build Status](https://travis-ci.org/JohnRudolfLewis/TestRobot.svg)](https://travis-ci.org/JohnRudolfLewis/TestRobot)
+[![Build Status](https://travis-ci.org/JohnRudolfLewis/TestRobot.svg?branch=master)](https://travis-ci.org/JohnRudolfLewis/TestRobot)
