@@ -4,6 +4,7 @@ import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import org.usfirst.frc.team1294.robot.utility.VersionFinder;
+import org.usfirst.frc.team1294.robot.utility.Xbox360Controller;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -11,15 +12,17 @@ import org.usfirst.frc.team1294.robot.utility.VersionFinder;
  */
 public class OI {
 	
-	public Joystick driveStick;
+	public Xbox360Controller xboxController;
 	
 	public OI() {
 		
-		driveStick = new Joystick(0);
+		xboxController = new Xbox360Controller(0);
 		
 		SmartDashboard.putString("Code Version", VersionFinder.getAttribute(this, VersionFinder.VERSION_ATTRIBUTE));
 		SmartDashboard.putString("Code Built By", VersionFinder.getAttribute(this, VersionFinder.BUILT_BY_ATTRIBUTE));
 		SmartDashboard.putString("Code Built At", VersionFinder.getAttribute(this, VersionFinder.BUILT_AT_ATTRIBUTE));
 	}
+	
+	
 }
 

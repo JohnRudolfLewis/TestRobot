@@ -2,7 +2,6 @@ package org.usfirst.frc.team1294.robot.subsystems;
 
 import org.usfirst.frc.team1294.robot.commands.ArcadeDriveCommand;
 
-import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.RobotDrive;
 import edu.wpi.first.wpilibj.TalonSRX;
 import edu.wpi.first.wpilibj.command.Subsystem;
@@ -33,7 +32,7 @@ public class DriveTrainSubsystem extends Subsystem {
 		setDefaultCommand(new ArcadeDriveCommand());
 	}
 	
-	public void arcadeDrive(Joystick stick) {
-		robotDrive.arcadeDrive(stick);
+	public void arcadeDrive(double moveValue, double rotateValue) {
+		robotDrive.arcadeDrive(moveValue, rotateValue);
 	}
 }
