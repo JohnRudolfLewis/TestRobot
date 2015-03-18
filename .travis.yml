@@ -3,3 +3,10 @@ language: java
 install: git clone https://github.com/JohnRudolfLewis/wpilib.git ~/wpilib
 script: ant jar
 jdk: oraclejdk8
+deploy:
+  provider: releases
+  api_key:
+    secure: K9IUqGuXx6caHd4ZoFVldC3OeSwRkO8tBcFoIraWXMBvg6Dntqu67hmzvuDWbnKKC0k6wMHEwCn3FsrAX2gGurTixFt6c8i/RIY10fvDQnZGSYn4LwJimY1/WO5TbGyWWAVTBDpgREV1ROGPAcy9/Cy+8MlFc6rAlGOZWfW+5fc=
+  file: dist/FRCUserProgram.jar
+  on:
+    repo: JohnRudolfLewis/TestRobot
