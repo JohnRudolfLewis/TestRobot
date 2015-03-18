@@ -1,10 +1,9 @@
 package org.usfirst.frc.team1294.robot;
 
-import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-
 import org.usfirst.frc.team1294.robot.utility.VersionFinder;
 import org.usfirst.frc.team1294.robot.utility.Xbox360Controller;
+
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
  * This class is the glue that binds the controls on the physical operator
