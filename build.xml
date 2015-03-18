@@ -20,11 +20,28 @@
   <!-- <property name="target" value=""/> -->
 
   <!-- Any other property in build.properties can also be overridden. -->
+	
+	<echo message="Updating version string..."/>
+		    <exec executable="git" outputproperty="code-version" errorproperty="code-version" error="UNKNOWN-VERSION"
+		          failifexecutionfails="false">
+		        <arg line="describe --always"/>
+		    </exec>
+    <echo message="Version string found: ${code-version}"/>
   
   <property file="${user.home}/wpilib/wpilib.properties"/>
   <property file="build.properties"/>
   <property file="${user.home}/wpilib/java/${version}/ant/build.properties"/>
-  
+  	
+	<!-- system environment variables like user.name -->
+	<property environment="env"/>
+	
+	<tstamp>
+		<!-- current time in this format: Jul 08, 04:34 PM -->
+		<format property="build-date" pattern="MMM dd, hh:mm a"/>
+	</tstamp>
+	
+	
+	
   <import file="custom_wpi_build.xml"/>
 
 </project> 
